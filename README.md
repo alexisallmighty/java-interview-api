@@ -2,7 +2,7 @@
 
 ## Description
 
-This [Spring Boot](https://spring.io/projects/spring-boot) project is provided as a starting template for the TalentReef take-home interview. Feel free to make whatever modifications are necessary to complete the exercise.
+This [Spring Boot](https://spring.io/projects/spring-boot) project is based on the starting template, so it should run the same this.
 
 ## Requirements
 
@@ -26,4 +26,4 @@ Execute tests using Gradle:
 
 ## Additional Information
 
-TalentReef will provide you the contact information of a person who can answer questions about the exercise.
+Please start this before running the UI project.
