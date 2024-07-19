@@ -15,18 +15,17 @@ import java.util.List;
 @Slf4j
 public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
-  @Override
-  protected ResponseEntity<Object> handleMethodArgumentNotValid(
-      MethodArgumentNotValidException ex, HttpHeaders headers,
-      HttpStatusCode status, WebRequest request) {
-    List<String> errorList = ex
-        .getBindingResult()
-        .getFieldErrors()
-        .stream()
-        .map((field) -> field.getField() + ": " + field.getDefaultMessage())
-        .toList();
+    @Override
+    protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
+            HttpHeaders headers, HttpStatusCode status, WebRequest request) {
+        List<String> errorList = ex.getBindingResult()
+                .getFieldErrors()
+                .stream()
+                .map((field) -> field.getField() + ": " + field.getDefaultMessage())
+                .toList();
 
-    return ResponseEntity.badRequest().body(errorList);
-  }
+        return ResponseEntity.badRequest()
+                .body(errorList);
+    }
 
 }

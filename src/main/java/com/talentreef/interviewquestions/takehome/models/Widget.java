@@ -16,9 +16,9 @@ import javax.persistence.Table;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor
-@Builder(toBuilder=true)
+@Builder(toBuilder = true)
 public class Widget {
 
-  private String name;
+    private String name;
 
 }

@@ -17,16 +17,17 @@ import java.util.List;
 @RequestMapping(value = "/v1/widgets", produces = MediaType.APPLICATION_JSON_VALUE)
 public class WidgetController {
 
-  private final WidgetService widgetService;
+    private final WidgetService widgetService;
 
-  public WidgetController(WidgetService widgetService) {
-    Assert.notNull(widgetService, "widgetService must not be null");
-    this.widgetService = widgetService;
-  }
+    public WidgetController(WidgetService widgetService) {
+        Assert.notNull(widgetService,
+                "widgetService must not be null");
+        this.widgetService = widgetService;
+    }
 
-  @GetMapping
-  public ResponseEntity<List<Widget>> getAllWidgets() {
-    return ResponseEntity.ok(widgetService.getAllWidgets());
-  }
+    @GetMapping
+    public ResponseEntity<List<Widget>> getAllWidgets() {
+        return ResponseEntity.ok(widgetService.getAllWidgets());
+    }
 
 }
