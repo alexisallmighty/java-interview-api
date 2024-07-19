@@ -1,16 +1,16 @@
 package com.talentreef.interviewquestions.takehome.respositories;
 
-import com.talentreef.interviewquestions.takehome.models.Widget;
-import org.springframework.stereotype.Repository;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.springframework.stereotype.Repository;
+
+import com.talentreef.interviewquestions.takehome.models.Widget;
+
 @Repository
 public class WidgetRepository {
-
     private List<Widget> table = new ArrayList<>();
 
     public List<Widget> deleteById(String name) {
@@ -36,5 +36,4 @@ public class WidgetRepository {
         table.add(widget);
         return widget;
     }
-
 }
