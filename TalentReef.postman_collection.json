@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "2a2c20bf-dd81-4a42-9bdc-69f7a79ba32f",
+		"name": "TalentReef",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2008125"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/v1/widgets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"v1",
+						"widgets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/v1/widgets/search?name=Widget 1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"v1",
+						"widgets",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Widget 1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add widget",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Widget 1\",\r\n    \"description\": \"Widget full description\",\r\n    \"price\": 100.89\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/v1/widgets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"v1",
+						"widgets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update widget",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Widget 1\",\r\n    \"description\": \"Widget full description edited\",\r\n    \"price\": 19900.89\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/v1/widgets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"v1",
+						"widgets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete by name",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/v1/widgets/delete?name=Widget 1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"v1",
+						"widgets",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Widget 1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
