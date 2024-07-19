@@ -24,6 +24,11 @@ Execute tests using Gradle:
 ./gradlew test
 ```
 
+## Postman colletion
+You'll find a postman collection included for easy integration
+
+https://github.com/alexisallmighty/java-interview-api/blob/main/TalentReef.postman_collection.json
+
 ## Additional Information
 
 Please start this before running the UI project.
